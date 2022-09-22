@@ -14,7 +14,7 @@ compiler on Windows and GCC on Unix/Darwin.
 ```shell
 git clone https://github.com/dreamscached/rickrollcxx
 mkdir rickrollcxx/build && cd rickrollcxx/build
-cmake .. && make
+cmake -DCMAKE_BUILD_TYPE=Release .. && make
 ```
 
 [1]: https://github.com/TheSystemGuy1337/Rickroll
