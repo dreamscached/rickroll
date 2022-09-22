@@ -3,7 +3,7 @@
 A C++ program that as the title suggests, rickrolls the user. What did you
 expect? That's all it does. Deal with it.
 
-Original project created by TheSystemGuy1337, further on maintained and worked
+[Original project][1] created by TheSystemGuy1337, further on maintained and worked
 on by dreamscached.
 
 ## Building
