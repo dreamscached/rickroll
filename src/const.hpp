@@ -5,6 +5,6 @@
 #ifndef RICKROLLCXX_CONST_HPP
 #define RICKROLLCXX_CONST_HPP
 
-#define RRCXX_RICK_URL "https://youtu.be/dQw4w9WgXcQ"
+#define RRCXX_RICK_URL "https://youtu.be/xvFZjo5PgG0"
 
 #endif //RICKROLLCXX_CONST_HPP
