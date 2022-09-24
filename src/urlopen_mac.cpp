@@ -17,8 +17,10 @@ bool urlopen(const std::string &url) {
         kCFStringEncodingASCII,
         NULL
     );
-    LSOpenCFURLRef(ref, 0);
+    int stat = LSOpenCFURLRef(ref, 0);
     CFRelease(ref);
+    // FIXME: Check if it works.
+    return stat == 0;
 }
 
 #endif
