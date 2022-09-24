@@ -4,7 +4,15 @@ A C++ program that as the title suggests, rickrolls the user. What did you
 expect? That's all it does. Deal with it.
 
 [Original project][1] created by TheSystemGuy1337, further on maintained and worked
-on by dreamscached.
+on by dreamscached. RickrollCXX, in contrast to original Rickroll project, has:
+
+* CMake builds
+* Full support of three major platforms
+  * Windows (natively) ✓
+  * Linux (with xdg-open) ✓
+  * MacOS (natively) ✓
+* Original ([dQw4w9WgXcQ](https://youtu.be/dQw4w9WgXcQ)) and ad-less ([xvFZjo5PgG0](https://youtu.be/xvFZjo5PgG0))
+  video URLs (`-DNOADS_URL` C++ flag)
 
 ## Building
 
