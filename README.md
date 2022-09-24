@@ -11,9 +11,24 @@ on by dreamscached.
 RickrollCXX uses CMake for building. You'll need MinGW/Visual Studio 
 compiler on Windows and GCC on Unix/Darwin.
 
+### Preparing CMake project
+
 ```shell
 git clone https://github.com/dreamscached/rickrollcxx
 mkdir rickrollcxx/build && cd rickrollcxx/build
+```
+
+### Compiling
+
+#### Default link ([dQw4w9WgXcQ](https://youtu.be/dQw4w9WgXcQ))
+
+```shell
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-DNOADS_URL" .. && make
+```
+
+#### Link with no ads ([xvFZjo5PgG0](https://youtu.be/xvFZjo5PgG0))
+
+```shell
 cmake -DCMAKE_BUILD_TYPE=Release .. && make
 ```
 
