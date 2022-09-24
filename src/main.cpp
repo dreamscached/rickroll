@@ -8,7 +8,7 @@
 
 int main(int argc, char **argv) {
     if (!urlopen(RRCXX_RICK_URL)) {
-        std::cout << "error: could not open video url." << std::endl;
+        std::cerr << "error: could not open video url." << std::endl;
         return 1;
     }
 
