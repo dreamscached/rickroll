@@ -12,8 +12,8 @@
 bool urlopen(const std::string &url) {
     CFURLRef ref = CFURLCreateWithBytes(
         NULL,
-        (UInt8*) url_str.c_str(),
-        url_str.length(),
+        (UInt8*) url.c_str(),
+        url.length(),
         kCFStringEncodingASCII,
         NULL
     );
