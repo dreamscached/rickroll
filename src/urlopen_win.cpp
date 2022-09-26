@@ -9,7 +9,7 @@
 #include "urlopen.hpp"
 
 bool urlopen(const std::string &url) {
-    return (INT_PTR) ShellExecute(0, 0, url.c_str(), 0, 0, SW_SHOW) > 32;
+    return (INT_PTR) ShellExecuteA(nullptr, "open", url.c_str(), nullptr, nullptr, SW_SHOWNORMAL) > 32;
 }
 
 #endif
