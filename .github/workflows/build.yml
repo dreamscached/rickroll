@@ -2,19 +2,11 @@ name: Build binaries
 
 on:
   push:
-    paths:
-      - src/**.cpp
-      - src/**.hpp
-      - .github/workflows/*.yml
-      - CMakeLists.txt
+    paths: [ src/**.cpp, src/**.hpp, CMakeLists.txt ]
 
   pull_request:
     branches: [ main, dev ]
-    paths:
-      - src/**.cpp
-      - src/**.hpp
-      - .github/workflows/*.yml
-      - CMakeLists.txt
+    paths: [ src/**.cpp, src/**.hpp, CMakeLists.txt ]
 
 env:
   BUILD_TYPE: Release
