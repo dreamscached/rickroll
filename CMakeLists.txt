@@ -14,7 +14,7 @@ include_directories(${EXTERNAL_INSTALL_LOCATION}/include)
 # Add CLI11 external project
 ExternalProject_add(
         CLI11
-        GIT_REPOSITORY https://github.com/CLIUtils/CLI11 GIT_TAG main
+        GIT_REPOSITORY https://github.com/CLIUtils/CLI11 GIT_TAG v2.2.0
         CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${EXTERNAL_INSTALL_LOCATION}
 )
 
