@@ -7,23 +7,23 @@ set(PROJECT_VERSION 1.0.0)
 project(${PROJECT_NAME} VERSION ${PROJECT_VERSION})
 
 # External projects (pull from GitHub and alike) setup
-set(EXTERNAL_INSTALL_LOCATION ${CMAKE_BINARY_DIR}/external)
-include(ExternalProject)
-include_directories(${EXTERNAL_INSTALL_LOCATION}/include)
+include(FetchContent)
 
-# Add CLI11 external project
-ExternalProject_add(
-        CLI11
-        GIT_REPOSITORY https://github.com/CLIUtils/CLI11 GIT_TAG v2.2.0
-        CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${EXTERNAL_INSTALL_LOCATION}
+# Pull CLI11 external project
+FetchContent_Declare(
+        cli11_proj
+        QUIET
+        GIT_REPOSITORY https://github.com/CLIUtils/CLI11.git
+        GIT_TAG v2.2.0
 )
+FetchContent_MakeAvailable(cli11_proj)
 
 # Build executable from *.cpp files under src/
 file(GLOB_RECURSE PROJECT_FILES src/**.cpp)
 add_executable(${PROJECT_NAME} ${PROJECT_FILES})
 
-# Add CLI11 dependency
-add_dependencies(${PROJECT_NAME} CLI11)
+# Include CLI11 project
+include_directories(${cli11_proj_SOURCE_DIR}/include)
 
 # Set executable base name to rickroll
 set(PROJECT_EXECUTABLE_NAME rickroll)
