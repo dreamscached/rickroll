@@ -2,11 +2,19 @@ name: Build binaries
 
 on:
   push:
-    paths: [ src/**.cpp, src/**.hpp, CMakeLists.txt ]
+    paths:
+      - src/**.cpp
+      - src/**.hpp
+      - .github/workflows/*.yml
+      - CMakeLists.txt
 
   pull_request:
     branches: [ main, dev ]
-    paths: [ src/**.cpp, src/**.hpp, CMakeLists.txt ]
+    paths:
+      - src/**.cpp
+      - src/**.hpp
+      - .github/workflows/*.yml
+      - CMakeLists.txt
 
 env:
   BUILD_TYPE: Release
@@ -27,4 +35,4 @@ jobs:
         run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
       - name: Build binaries
-        run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
+        run: cmake --build ${{github.workspace}}/build --parallel 8 --config ${{env.BUILD_TYPE}}
